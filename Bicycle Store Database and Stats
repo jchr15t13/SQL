@@ -1,0 +1,29 @@
+--Create a database to create own store 
+
+CREATE TABLE bike_store (id INTEGER PRIMARY KEY, name TEXT, inventory_quantity REAL, aisle REAL, price INTEGER, supplier TEXT, cost INTEGER); 
+
+INSERT INTO bike_store VALUES (1, "Bike Frames", 10, 2, 1000.16, "BikesRUs", 750.75); 
+INSERT INTO bike_store VALUES (2, "Jersey & Shorts", 170, 8, 45.11, "Bike Natchbarr", 10.85); 
+INSERT INTO bike_store VALUES (3, "Components", 20, 3, 300.65, "BikesRUs", 127.62); 
+INSERT INTO bike_store VALUES (4, "Tires", 100, 3, 30.33, "Tires+", 2.75); 
+INSERT INTO bike_store VALUES (5, "Hardware", 63, 3, 79.97, "Bike Supplies", 41.99); 
+INSERT INTO bike_store VALUES (6, "Handle Bars", 44, 3, 32.34, "Bike Supplies", 21.77); 
+INSERT INTO bike_store VALUES (7, "Water Bottles", 133, 8, 6.99, "Bike Natchbarr", .75); 
+INSERT INTO bike_store VALUES (8, "Bike Stand", 4, 4, 99.87, "Bike Supplies", 41.54); 
+INSERT INTO bike_store VALUES (9, "Seat", 10, 3, 23.87, "Bike Supplies", 11.68); 
+INSERT INTO bike_store VALUES (10, "Shoes", 31, 7, 125.36, "Bike Natchbarr", 87.88); 
+INSERT INTO bike_store VALUES (11, "Pedals", 41, 3, 77.78, "BikesRUs", 44.22); 
+INSERT INTO bike_store VALUES (12, "Rims", 22, 3, 67.22, "BikesRUs", 25.69); 
+INSERT INTO bike_store VALUES (13, "Sunglasses", 45, 8, 38.38, "Bike Natchbarr", 19.74); 
+INSERT INTO bike_store VALUES (14, "Helmet", 17, 4, 56.55, "Bike Natchbarr", 37.99); 
+INSERT INTO bike_store VALUES (15, "Car Roof Mounts", 2, 4, 275.89, "Bike Supplies", 165.25); 
+
+--show complete table 
+SELECT * FROM bike_store; 
+
+--what are price of items above 1 dollar? 
+SELECT * FROM bike_store WHERE price >=1 ORDER BY price; 
+
+--what are average cost of items sold?
+SELECT avg(cost) FROM bike_store; 
+
